@@ -521,10 +521,10 @@
   var titleTime;
   document.addEventListener("visibilitychange", function () {
     if (document.hidden) {
-      document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+      document.title = "路在脚下 " + originTitle;
       clearTimeout(titleTime);
     } else {
-      document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+      document.title = "一步一个脚" + originTitle;
       titleTime = setTimeout(function () {
         document.title = originTitle;
       }, 2000);
