@@ -12,14 +12,12 @@
   
     
     <!-- <meta name="keywords" content="">
-    <meta name="description" content="chenss blog test"> -->
+    <meta name="description" content=""> -->
   
-  <meta name="description" content="chenss blog test">
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Sly Chen Blog">
 <meta property="og:url" content="https://slychen.github.io/index.html">
 <meta property="og:site_name" content="Sly Chen Blog">
-<meta property="og:description" content="chenss blog test">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Sly Chen">
 <meta name="twitter:card" content="summary">
@@ -71,19 +69,19 @@
 			<h1 class="header-author"><a href="/">Sly Chen</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">chenss blog</p>
+		<p class="header-subtitle">路在脚下</p>
 		
 
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/" target="_blank">主页</a></li>
+				<li><a href="/" >主页</a></li>
 			
-				<li><a href="/" target="_blank">技术笔记</a></li>
+				<li><a href="/" >技术笔记</a></li>
 			
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" >随笔</a></li>
 			
-				<li><a href="/" target="_blank">梦想开始的地方</a></li>
+				<li><a href="/" >梦开始的地方</a></li>
 			
 			</ul>
 		</nav>
@@ -107,22 +105,22 @@
 				
 					
 						<a class="github" href="#" 
-												title="GitHub" target="_blank"><i class="icon-github"></i></a>
+												title="GitHub" ><i class="icon-github"></i></a>
 					
 				
 					
 						<a class="github" href="#" 
-												title="GitHub" target="_blank"><i class="icon-github"></i></a>
+												title="GitHub" ><i class="icon-github"></i></a>
 					
 				
 					
 						<a class="gitee" href="#" 
-												title="gitee" target="_blank"><i class="icon-gitee"></i></a>
+												title="gitee" ><i class="icon-gitee"></i></a>
 					
 				
 					
 						<a class="jianshu" href="#" 
-												title="jianshu" target="_blank"><i class="icon-jianshu"></i></a>
+												title="jianshu" ><i class="icon-jianshu"></i></a>
 					
 				
 			</div>
@@ -157,7 +155,7 @@
 			  <h1 class="header-author js-header-author">Sly Chen</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>chenss blog<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>路在脚下<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -207,7 +205,7 @@
 		        
 					<li style="width: 25%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
-					<li style="width: 25%"><a href="/">梦想开始的地方</a></li>
+					<li style="width: 25%"><a href="/">梦开始的地方</a></li>
 		        
 				</ul>
 			</nav>
@@ -234,8 +232,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2018/01/20/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%B9%8Bperccli%E5%92%8Cstorccli/" target="_blank">服务器硬件管理工具之perccli和storccli</a>
-  
+	  <a class="article-title" href="/2018/01/20/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%B9%8Bperccli%E5%92%8Cstorccli/">服务器硬件管理工具之perccli和storccli</a>
+	
     </h1>
   
 
@@ -255,29 +253,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>[toc]</p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在工作场景中，不乏遇到在线阵列配置或硬盘模式更改的。为了方便理解，打一个不是很恰当的比方：一台业务机器除系统盘外全部单盘raid0做数据挂载，在业务运行过程中，有一块硬盘坏了，我们在线更换硬盘后，因为硬盘模式的问题，此时系统是无法识别硬盘的，对不对，那怎么办？重启机器配置阵列？那如果业务较重要，不能停机呢？这时就是perccli和storccli大展身手的时候了。</p>
-<p>其实perccli和storccli就是同一个工具，语法完全一样，只是命令名字不一样，适用的品牌不一样。perccli适用于dell机器，storccli适用于华为、浪潮（其它品牌没有测试过，不确认）。下面指令以perccli做示例。顺便贴个下载链接吧。<br><a target="_blank" rel="noopener" href="https://downloads.dell.com/FOLDER03559396M/1/perccli-1.17.10-1.noarch.rpm">https://downloads.dell.com/FOLDER03559396M/1/perccli-1.17.10-1.noarch.rpm</a><br><a target="_blank" rel="noopener" href="https://downloadmirror.intel.com/26820/eng/StorCli.zip">https://downloadmirror.intel.com/26820/eng/StorCli.zip</a></p>
-<h1 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h1><p>登录BROADCOM网站上RAID卡的页面。</p>
-<p>在“DOWNLOADS”页签中单击“Management Software and Tools”。<br>打开管理软件和工具列表。<br>下载最新版本的“MegaRAID Storcli”工具。<br>解压后得到适用于不同操作系统的工具包。</p>
-<h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># ./perccli64 /c0/eall/sall show                    查看物理硬盘信息列表</span><br><span class="line"># ./perccli64 /c0/vall                              查看虚拟磁盘信息列表，即阵列信息</span><br><span class="line"># ./perccli64 /c0 show preservedCache               查看虚拟磁盘丢失信息</span><br><span class="line"># ./perccli64 /c0/fall show all                     查看脱机硬盘信息</span><br><span class="line"></span><br><span class="line"># ./perccli64 /c0/v11 delete preservedcache         清除控制器0上的虚拟磁盘11的缓存信息</span><br><span class="line"># ./perccli64  /c0/fall delete                      清除外来硬盘配置信息</span><br><span class="line"># ./perccli64 /c0/fall import [preview ]            导入外来硬盘配置</span><br><span class="line"></span><br><span class="line"># ./perccli64 /c0 add vd r0 drives=32:10 wb ra                   编号为32:10的硬盘做raid0</span><br><span class="line"># ./perccli64 /c0 add vd r5 size=all drives=32:01,32:02,32:03    对应编号3块硬盘做raid5</span><br><span class="line"># ./perccli64 /c0 add vd r1 size=all drives=32:01,32:02          对应编号2块硬盘做raid1</span><br><span class="line"></span><br><span class="line"># ./perccli64 /cx/vx set wrcache=WT|WB|AWB    更改阵列写属性</span><br><span class="line"># ./perccli64 /cx/vx set rdcache=RA|NoRA    更改阵列读属性</span><br><span class="line"># ./perccli64 /cx/vx set iopolicy=Cached|Direct</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">- RA= Read ahead</span><br><span class="line">- NORA = No read ahead</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">perccli /cx/vx set wrcache=&lt;WT|WB|FWB&gt;</span><br><span class="line"></span><br><span class="line">- WT — Write through</span><br><span class="line">- WB — Write back</span><br><span class="line">- FWB — Force write back even in case of bad BBU</span><br></pre></td></tr></table></figure>
-
-<p>示例说明</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># perccli /c0/vall show</span><br><span class="line">---------------------------------------------------------------</span><br><span class="line">DG/VD TYPE  State Access Consist Cache Cac sCC       Size Name</span><br><span class="line">---------------------------------------------------------------</span><br><span class="line">0/0   RAID5 Optl  RW     Yes     RWTD  -   OFF 292.967 GB      </span><br><span class="line">0/1   RAID5 Optl  RW     Yes     NRWTD -   OFF   7.350 TB      </span><br><span class="line"></span><br><span class="line">R -- 已开启预读</span><br><span class="line">NR -- 未开启预读</span><br><span class="line">WT -- 直写</span><br><span class="line">WB -- 回写</span><br><span class="line">D -- Direct IO</span><br></pre></td></tr></table></figure>
-
-<p>运用示例<br>1.讲其它示例前，我们先把前言部分硬盘更换重做raid0的问题先解决</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># 先清除故障硬盘缓存信息</span><br><span class="line">get_miss_vds=`./perccli64 /c0 show preservedcache | awk &#x27;/Missing/ &#123;print $1&#125;&#x27;`</span><br><span class="line">./perccli64 /c0/fall delete &amp;&gt; /dev/null</span><br><span class="line"></span><br><span class="line">if [ -z &quot;$get_miss_vds&quot; ]; then</span><br><span class="line">    echo &quot;No miss virtual disk,pass...&quot;</span><br><span class="line">    exit</span><br><span class="line">else</span><br><span class="line">    for i in $get_miss_vds; do</span><br><span class="line">        ./perccli64 /c0/v$i delete preservedcache</span><br><span class="line">    done</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 判断物理硬盘模式信息，如果处于UGood模式则创建raid0</span><br><span class="line"></span><br><span class="line">ugood_disks=`./perccli64 /c0/eall/sall show | awk &#x27;/^[0-9].*UGood/ &#123;print $1&#125;&#x27;`</span><br><span class="line">for i in $ugood_disks; do</span><br><span class="line">    ./perccli64 /c0 add vd r0 drives=$i wb ra</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-<p>如上，无论你是坏几块盘，只要系统还没有崩溃，都可运行。如果是多阵列运行，需注意硬盘所属阵列，如果raid1的系统盘有一块同时处于故障系列，需等待系统盘阵列同步完成后才可执行上述代码 </p>
-<p>2.硬盘模式更改</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">diskType=`echo $1 | egrep -io &#x27;SSD|HDD|ALL&#x27;`</span><br><span class="line">destMode=`echo $1 | egrep -io &#x27;jbod|online&#x27;`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">jbod_status=`./perccli64 /c0 show jbod | awk &#x27;/^JBOD/&#123;print $1&#125;&#x27;`</span><br><span class="line">if [ &quot;$1&quot; == &quot;ALL_online&quot; -a &quot;$jbod_status&quot; == &quot;ON&quot; ]; then</span><br><span class="line">    # 关闭jbod模式，所有硬盘自动转换为UGood模式后，磁盘可用于阵列创建</span><br><span class="line">    ./perccli64 /c0 set jbod=off &amp;&gt; /dev/null</span><br><span class="line">elif [ &quot;$1&quot; != &quot;ALL_online&quot; -a &quot;$jbod_status&quot; == &quot;OFF&quot; ]; then</span><br><span class="line">    # 启用jbod，适用于hadoop等业务机器数据挂载</span><br><span class="line">    ./perccli64 /c0 set jbod=on &amp;&gt; /dev/null     </span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"># 根据$1定义需转换的源硬盘类型</span><br><span class="line">if [ &quot;$diskType&quot; == &quot;ALL&quot; -a &quot;$destMode&quot; == &quot;jbod&quot; ]; then</span><br><span class="line">    reMode=&#x27;^[0-9].*UGood&#x27;</span><br><span class="line">elif [ &quot;$diskType&quot; == &quot;HDD&quot; -a &quot;$destMode&quot; == &quot;online&quot; ]; then</span><br><span class="line">    # 所有HDD的JBOD硬盘转换为UGood模式</span><br><span class="line">    reMode=&#x27;^[0-9].*JBOD.*HDD&#x27;</span><br><span class="line">elif [ &quot;$diskType&quot; == &quot;HDD&quot; -a &quot;$destMode&quot; == &quot;jbod&quot; ]; then</span><br><span class="line">    #所有HDD磁盘转换为JBOD模式</span><br><span class="line">    reMode=&#x27;^[0-9].*UGood.*HDD&#x27;</span><br><span class="line">elif [ &quot;$diskType&quot; == &quot;SSD&quot; -a &quot;$destMode&quot; == &quot;jbod&quot; ]; then</span><br><span class="line">    # 所有SSD转为JBOD模式</span><br><span class="line">    reMode=&#x27;^[0-9].*UGood.*SSD&#x27;</span><br><span class="line">elif [ &quot;$diskType&quot; == &quot;SSD&quot; -a &quot;$destMode&quot; == &quot;online&quot; ]; then</span><br><span class="line">    # 所有SSD转换为UGood模式</span><br><span class="line">    reMode=&#x27;^[0-9].*JBOD.*SSD&#x27;</span><br><span class="line">else</span><br><span class="line">    echo -e &quot;\e[0;31;1m当前脚本不支持此类型硬盘模式转换\e[0m&quot;</span><br><span class="line">    exit 2</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"># 开始转换</span><br><span class="line">./perccli64 /c0/eall/sall show | egrep $reMode | awk -F &#x27;[ :]&#x27; &#x27;&#123;print $1,$1&#125;&#x27; | while read EID SLOT; do</span><br><span class="line">    if [ &quot;$&#123;destMode&#125;&quot; == &quot;jbod&quot; ]; then</span><br><span class="line">        ./perccli64 /c0/e$EID/s$SLOT set $&#123;destMode&#125; &amp;&gt; /dev/null</span><br><span class="line">    elif [ &quot;$&#123;destMode&#125;&quot; == &quot;online&quot; ]; then</span><br><span class="line">        ./perccli64 /c0/e$EID/s$SLOT set good force &amp;&gt; /dev/null</span><br><span class="line">    fi    </span><br><span class="line">    </span><br><span class="line">    # 检查转换结果</span><br><span class="line">    diskState=`./perccli64 /c0/eall/sall show | egrep -w &quot;$&#123;EID&#125;:$&#123;SLOT&#125;&quot; | awk &#x27;&#123;print $3&#125;&#x27; | sed &#x27;s/UGood/online/g&#x27; | tr &#x27;A-Z&#x27; &#x27;a-z&#x27;`</span><br><span class="line">    if [ &quot;$diskState&quot; == &quot;$destMode&quot; ]; then</span><br><span class="line">        echo &quot;$EID:$SLOT state set $destMode success&quot;</span><br><span class="line">    else</span><br><span class="line">        echo -e &quot;\e[0;31;1m$EID:$SLOT set $destMode  failed,please check\e[0m&quot;</span><br><span class="line">        exit</span><br><span class="line">    fi</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-
-<p>其实这两个命令更适合的场景是根据业务类型在ks文件中定义阵列，通过pxe下发，物理机系统安装前即可自动配置阵列了。</p>
-<p>硬盘类型识别， 特别是 pci ssd，因为没有走阵列卡，上面两个命令无法获取其信息</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lsblk -d -o name,rota</span><br><span class="line">NAME    ROTA</span><br><span class="line">sda        1</span><br><span class="line">sdb        1</span><br><span class="line">nvme0n1    0</span><br></pre></td></tr></table></figure>
-
-
+    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在工作场景中，不乏遇到在线阵列配置或硬盘模式更改的。为了方便理解，打一个不是很恰当的比方：一台业务机器除系统盘外全部单盘raid0做数据挂载，在业务运行过程中，有一块硬盘坏了，我们在线更换硬盘后，因为硬盘模式的问题，此时系统是无法识别硬盘的，对不对，那怎么办？重启机器配置阵列？那如果业务较重要，不能停机呢？这时就是perccli和storccli大展身手的时候了。</p>
+    
+    <a class="article-more-a" href="/2018/01/20/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%B9%8Bperccli%E5%92%8Cstorccli/#more">展开全文 >></a>
+    
     
 
     
@@ -290,10 +269,6 @@
     
     
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/01/20/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%B9%8Bperccli%E5%92%8Cstorccli/">展开全文 >></a>
-    </p>
     
 
     
@@ -367,7 +342,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: true,
+		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
